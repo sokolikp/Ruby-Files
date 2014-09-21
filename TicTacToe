@@ -1,4 +1,4 @@
-
+//initialize array
 var ticTacToeArray = new Array([1,2,3],
                                [4,5,6],
                                [7,8,9]);
@@ -10,6 +10,30 @@ var printBoard = function(boardArray) {
     }
 };
 
+var clearBoard = function(boardArray) {
+    boardArray = ([1,2,3],
+                  [4,5,6],
+                  [7,8,9]);
+};
 
+//printBoard(ticTacToeArray);
+
+//clearBoard(ticTacToeArray);
+
+//printBoard(ticTacToeArray);
+
+var opponentSymbol = prompt('Please choose your player (X/Y)').toUpperCase();
+while(opponentSymbol != 'X' && opponentSymbol != 'Y') {
+    //console.log('Please select either X or Y');
+    opponentSymbol = prompt('Please select either X or Y').toUpperCase();
+}
+
+console.log(opponentSymbol);
+
+console.log('Great! You are player ' + opponentSymbol + '. Please '
+             + 'choose your first move on the below board');
 
 printBoard(ticTacToeArray);
+var move = prompt('Choose location of first ' + opponentSymbol + '.');
+
+
